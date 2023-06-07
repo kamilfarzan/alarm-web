@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="alarm clock." />
+    <title>Alarm</title>
+    <link rel="icon" href="assets/flushdrip.png" />
+    <link rel="stylesheet" href="alarm.css" />
+    <script src="alarm.js" defer></script>
+  </head>
+  <body>
+    <div id="main-container">
+      <h2 id="clock"></h2>
+      <h2 id="ampm-clock"></h2>
+    </div>
+    <div id="alarm-container">
+      <h3>Set Alarm Time</h3>
+      <label>
+        <div>
+          <input type="number" id="alarmhrs" min="1" max="12" />
+        </div>
+      </label>
+      <label>
+        <div>
+          <input type="number" id="alarmmins" min="0" max="59" />
+        </div>
+      </label>
+      <label>
+        <div>
+          <input type="number" id="alarmsecs" min="0" max="59" />
+        </div>
+      </label>
+      <label>
+        <div>
+          <select id="ampm">
+            <option value="PM">PM</option>
+            <option value="AM">AM</option>
+          </select>
+        </div>
+      </label>
+    </div>
+
+    <div id="buttonHolder">
+      <div>
+        <button id="setButton" onClick="alarmSet()">Set Alarm</button>
+      </div>
+      <div>
+        <button id="clearButton" onClick="alarmClear()">Clear Alarm</button>
+      </div>
+    </div>
+
+    <div class="check">!</div>
+  </body>
+</html>
